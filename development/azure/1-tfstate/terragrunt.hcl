@@ -17,10 +17,27 @@ generate "remote_state" {
     path      = "1-remote-state.tf"
     if_exists = "overwrite"
     contents  = <<EOF
-        %{ if local.environment_vars.locals.aws_provider_config.enabled }
+        %{ if local.environment_vars.locals.azure_provider_config.enabled }
         resource "azurerm_resource_group" "tfstate_rg" {
             name     = "${local.environment}-tfstate-rg"
-            location = ${local.environment_vars.locals.region}
+            location = ${local.environment_vars.locals.azure_provider_config.region}
+        }
+
+        resource "azurerm_storage_account" "tfstate_sa" {
+            name                      = "${local.environment}-tfstate-sa"
+            resource_group_name       = azurerm_resource_group.tfstate_rg.name
+            location                  = ${local.environment_vars.locals.azure_provider_config.region}
+            account_tier              = "Standard"
+            account_replication_type  = "LRS"
+            enable_https_traffic_only = true
+        }
+
+        resource "azurerm_storage_container" "tfstate_container" {
+            name                  = "${local.environment}-tfstate"
+            storage_account_name = azurerm_storage_account.tfstate_sa.name
+            container_access_type = "private"
+
+            depends_on = [azurerm_storage_account.tfstate_sa]
         }
         %{ endif }
     EOF

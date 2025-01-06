@@ -17,31 +17,11 @@ generate "remote_state" {
     path      = "1-remote-state.tf"
     if_exists = "overwrite"
     contents  = <<EOF
-        %{ if local.environment_vars.locals.aws_provider_config.enabled }
-        resource "aws_s3_bucket" "tfstate_bucket" {
+        %{ if local.environment_vars.locals.tencent_provider_config.enabled }
+        resource "tencentcloud_cos_bucket" "tfstate_bucket" {
             bucket = "${local.environment}-tfstate"
             acl    = "private"
-
-            lifecycle {
-                prevent_destroy = false
-            }
-
-            tags = {
-                Environment = "${local.environment}"
-                Deployment  = "${local.deployment}"
-            }
-        }
-
-        resource "aws_dynamodb_table" "tfstate_lock"
-            name           = "${local.environment}-tfstate-lock"
-            read_capacity  = 20
-            write_capacity = 20
-            hash_key       = "LockID"
-            attribute {
-                name = "LockID"
-                type = "S"
-            }
-
+            
             tags = {
                 Environment = "${local.environment}"
                 Deployment  = "${local.deployment}"
