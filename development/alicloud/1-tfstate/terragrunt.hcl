@@ -13,11 +13,12 @@ inputs = {
     environment = local.environment
 }
 
+# alicloud does not support native state locking so we need to create an OSS bucket and OTS table
 generate "remote_state" {
     path      = "1-remote-state.tf"
     if_exists = "overwrite"
     contents  = <<EOF
-        %{ if local.environment_vars.locals.alibaba_provider_config.enabled }
+        %{ if local.environment_vars.locals.alicloud_provider_config.enabled }
         resource "alicloud_oss_bucket" "tfstate_bucket" {
             bucket = "${local.environment}-tfstate"
             

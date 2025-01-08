@@ -17,20 +17,20 @@ generate "provider" {
     path      = "0-provider.tf"
     if_exists = "overwrite"
     contents  = <<EOF
-        %{ if local.environment_vars.locals.alibaba_provider_config.enabled }
+        %{ if local.environment_vars.locals.alicloud_provider_config.enabled }
         terraform {
             required_providers {
                 alicloud = {
                     source  = "aliyun/alicloud"
-                    version = "${local.environment_vars.locals.alibaba_provider_config.version}"
+                    version = "${local.environment_vars.locals.alicloud_provider_config.version}"
                 }
             }
         }
 
         provider "alicloud" {
-            access_key = "${local.environment_vars.locals.alibaba_provider_config.access_key}"
-            secret_key = "${local.environment_vars.locals.alibaba_provider_config.secret_key}"
-            region     = "${local.environment_vars.locals.alibaba_provider_config.region}"
+            access_key = "${local.environment_vars.locals.alicloud_provider_config.access_key}"
+            secret_key = "${local.environment_vars.locals.alicloud_provider_config.secret_key}"
+            region     = "${local.environment_vars.locals.alicloud_provider_config.region}"
         }
         %{ endif }
     EOF

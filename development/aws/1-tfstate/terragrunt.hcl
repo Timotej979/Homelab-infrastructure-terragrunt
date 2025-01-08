@@ -13,6 +13,7 @@ inputs = {
     environment = local.environment
 }
 
+# AWS partially supports state locking so S3 bucket and DynamoDB table are required
 generate "remote_state" {
     path      = "1-remote-state.tf"
     if_exists = "overwrite"

@@ -4,16 +4,16 @@ locals {
 
     ############################### CLOUD PROVIDERS ###############################
 
-    # Alibaba infrastructure creation configuration (OWN BACKEND)
-    alibaba_provider_config = {
+    # Alicloud infrastructure creation configuration (OWN BACKEND)
+    alicloud_provider_config = {
         enabled    = false
         version    = "~> 1.239.0"
-        access_key = "{INSERT ALIBABA ACCESS KEY}"
-        secret_key = "{INSERT ALIBABA SECRET KEY}"
+        access_key = "{INSERT ALICLOUD ACCESS KEY}"
+        secret_key = "{INSERT ALICLOUD SECRET KEY}"
         region     = "eu-central-1"
     }
 
-    alibaba_infrastructure_config = {}
+    alicloud_infrastructure_config = {}
 
 
     # AWS infrastructure creation configuration (OWN BACKEND)
@@ -47,10 +47,10 @@ locals {
                  # Allowed backends: "oss", "s3", "azurerm", "gcs", "cos"
                 type = "{INSERT ONE OF ALLOWED TF BACKENDS}"
                 credentials = {
-                    # Alibaba
+                    # Alicloud
                     #version    = "~> 1.239.0"
-                    #access_key = "{INSERT ALIBABA ACCESS KEY}"
-                    #secret_key = "{INSERT ALIBABA SECRET KEY}"
+                    #access_key = "{INSERT ALICLOUD ACCESS KEY}"
+                    #secret_key = "{INSERT ALICLOUD SECRET KEY}"
                     #region     = "eu-central-1"
                     
                     # AWS
@@ -91,10 +91,10 @@ locals {
             # Allowed backends: "oss", "s3", "azurerm", "gcs", "cos"
             type = "{INSERT ONE OF ALLOWED TF BACKENDS}"
             credentials = {
-                # Alibaba
+                # Alicloud
                 #version    = "~> 1.239.0"
-                #access_key = "{INSERT ALIBABA ACCESS KEY}"
-                #secret_key = "{INSERT ALIBABA SECRET KEY}"
+                #access_key = "{INSERT ALICLOUD ACCESS KEY}"
+                #secret_key = "{INSERT ALICLOUD SECRET KEY}"
                 #region     = "eu-central-1"
                 
                 # AWS
@@ -148,10 +148,10 @@ locals {
                  # Allowed backends: "oss", "s3", "azurerm", "gcs", "cos"
                 type = "{INSERT ONE OF ALLOWED TF BACKENDS}"
                 credentials = {
-                    # Alibaba
+                    # Alicloud
                     #version    = "~> 1.239.0"
-                    #access_key = "{INSERT ALIBABA ACCESS KEY}"
-                    #secret_key = "{INSERT ALIBABA SECRET KEY}"
+                    #access_key = "{INSERT ALICLOUD ACCESS KEY}"
+                    #secret_key = "{INSERT ALICLOUD SECRET KEY}"
                     #region     = "eu-central-1"
                     
                     # AWS
@@ -202,10 +202,10 @@ locals {
                  # Allowed backends: "oss", "s3", "azurerm", "gcs", "cos"
                 type = "{INSERT ONE OF ALLOWED TF BACKENDS}"
                 credentials = {
-                    # Alibaba
+                    # Alicloud
                     #version    = "~> 1.239.0"
-                    #access_key = "{INSERT ALIBABA ACCESS KEY}"
-                    #secret_key = "{INSERT ALIBABA SECRET KEY}"
+                    #access_key = "{INSERT ALICLOUD ACCESS KEY}"
+                    #secret_key = "{INSERT ALICLOUD SECRET KEY}"
                     #region     = "eu-central-1"
                     
                     # AWS
@@ -250,10 +250,10 @@ locals {
                  # Allowed backends: "oss", "s3", "azurerm", "gcs", "cos"
                 type = "{INSERT ONE OF ALLOWED TF BACKENDS}"
                 credentials = {
-                    # Alibaba
+                    # Alicloud
                     #version    = "~> 1.239.0"
-                    #access_key = "{INSERT ALIBABA ACCESS KEY}"
-                    #secret_key = "{INSERT ALIBABA SECRET KEY}"
+                    #access_key = "{INSERT ALICLOUD ACCESS KEY}"
+                    #secret_key = "{INSERT ALICLOUD SECRET KEY}"
                     #region     = "eu-central-1"
                     
                     # AWS
@@ -311,10 +311,10 @@ locals {
                  # Allowed backends: "oss", "s3", "azurerm", "gcs", "cos"
                 type = "{INSERT ONE OF ALLOWED TF BACKENDS}"
                 credentials = {
-                    # Alibaba
+                    # Alicloud
                     #version    = "~> 1.239.0"
-                    #access_key = "{INSERT ALIBABA ACCESS KEY}"
-                    #secret_key = "{INSERT ALIBABA SECRET KEY}"
+                    #access_key = "{INSERT ALICLOUD ACCESS KEY}"
+                    #secret_key = "{INSERT ALICLOUD SECRET KEY}"
                     #region     = "eu-central-1"
                     
                     # AWS

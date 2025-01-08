@@ -13,6 +13,7 @@ inputs = {
     environment = local.environment
 }
 
+# Azure supports native state locking so no additional configuration is required
 generate "remote_state" {
     path      = "1-remote-state.tf"
     if_exists = "overwrite"
