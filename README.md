@@ -2,28 +2,43 @@
 
 
 <div align="center">
-  <img src="./docs/assets/terraform-logo.png" style="height: 100px; width: auto; position: relative; top: 5px;">
-  <img src="./docs/assets/plus.png" style="height: 50px; width: auto; position: relative; top: -20px;">
-  <img src="./docs/assets/terragrunt-logo.png" style="height: 100px; width: auto;">
+  <p>
+    <img src="./docs/assets/terraform-logo.png" style="height: 100px; width: auto; position: relative; top: 5px;">
+    <img src="./docs/assets/plus.png" style="height: 50px; width: auto; position: relative; top: -20px;">
+    <img src="./docs/assets/terragrunt-logo.png" style="height: 100px; width: auto;">
+  </p>
 </div>
 
 <h2 align="center">Supported cloud providers</h2>
 
 <div align="center">
-  <img src="./docs/assets/alicloud-logo.png" style="height: 90px; width: auto; position: relative; top: -10px;">
-  <img src="./docs/assets/aws-logo.png" style="height: 90px; width: auto;">
-  <img src="./docs/assets/azure-logo.png" style="height: 115px; width: auto;">
-  <img src="./docs/assets/gcp-logo.png" style="height: 35px; width: auto; position: relative; top: -35px;">
-  <img src="./docs/assets/tencent-logo.png" style="height: 100px; width: auto;">
+  <p>
+    <img src="./docs/assets/alicloud-logo.png" style="height: 90px; width: auto; position: relative; top: -10px;">
+    <img src="./docs/assets/gcp-logo.png" style="height: 35px; width: auto; position: relative; top: -35px;">
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <img src="./docs/assets/aws-logo.png" style="height: 90px; width: auto;">
+    <img src="./docs/assets/azure-logo.png" style="height: 115px; width: auto;">
+    <img src="./docs/assets/tencent-logo.png" style="height: 100px; width: auto;">
+  </p>
 </div>
 
 <div align="center" style="margin-top: 20px;">
-  <img src="./docs/assets/digitalocean-logo.png" style="height: 100px; width: auto;">
-  <img src="./docs/assets/hetzner-logo.png" style="height: 90px; width: auto;">
-  <img src="./docs/assets/huawei-logo.png" style="height: 80px; width: auto; position: relative; left: 0px;">
-  <img src="./docs/assets/linode-logo.png" style="height: 70px; width: auto; position: relative; left: 25px;">
-  <img src="./docs/assets/ibm-logo.png" style="height: 80px; width: auto; position: relative; left: 50px;">
-  
+  <p>
+    <img src="./docs/assets/hetzner-logo.png" style="height: 90px; width: auto;">
+    <img src="./docs/assets/linode-logo.png" style="height: 70px; width: auto; position: relative; left: 25px;">
+  </p>
+</div>
+
+<div align="center" style="margin-top: 20px;">
+  <p>
+    <img src="./docs/assets/digitalocean-logo.png" style="height: 100px; width: auto;">
+    <img src="./docs/assets/huawei-logo.png" style="height: 80px; width: auto; position: relative; left: 0px;">
+    <img src="./docs/assets/ibm-logo.png" style="height: 80px; width: auto; position: relative; left: 50px;">
+  </p>
 </div>
 
 <div align="center" style="margin-top: 20px; margin-bottom: 30px;">
