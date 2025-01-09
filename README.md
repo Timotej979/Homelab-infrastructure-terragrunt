@@ -2,19 +2,17 @@
 
 
 <div align="center">
-  <p>
-    <img src="./docs/assets/terraform-logo.png" style="height: 100px; width: auto; position: relative; top: 5px;">
-    <img src="./docs/assets/plus.png" style="height: 50px; width: auto; position: relative; top: -20px;">
-    <img src="./docs/assets/terragrunt-logo.png" style="height: 100px; width: auto;">
-  </p>
+      <img src="./docs/assets/terraform-logo.png" style="height: 100px; width: auto;">
+      <img src="./docs/assets/plus.png" vspace="25px" style="height: 50px; width: auto;">
+      <img src="./docs/assets/terragrunt-logo.png" style="height: 100px; width: auto;">
 </div>
 
 <h2 align="center">Supported cloud providers</h2>
 
 <div align="center">
-  <p>
-    <img src="./docs/assets/alicloud-logo.png" style="height: 90px; width: auto; position: relative; top: -10px;">
-    <img src="./docs/assets/gcp-logo.png" style="height: 35px; width: auto; position: relative; top: -35px;">
+  <p style="inline-block;">
+    <img src="./docs/assets/alicloud-logo.png" style="height: 90px; width: auto;">
+    <img src="./docs/assets/gcp-logo.png" style="height: 35px; width: auto;">
   </p>
 </div>
 
@@ -25,6 +23,8 @@
     <img src="./docs/assets/tencent-logo.png" style="height: 100px; width: auto;">
   </p>
 </div>
+
+---
 
 <div align="center" style="margin-top: 20px;">
   <p>
