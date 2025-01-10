@@ -1,50 +1,32 @@
-<h1 align="center">Homelab Infrastructure Terragrunt</h1>
+<h1 align="center">HOMELAB INFRASTRUCTURE TERRAGRUNT</h1>
 
 
 <div align="center">
-      <img src="./docs/assets/terraform-logo.png" style="height: 100px; width: auto;">
-      <img src="./docs/assets/plus.png" vspace="25px" style="height: 50px; width: auto;">
-      <img src="./docs/assets/terragrunt-logo.png" style="height: 100px; width: auto;">
+  <img src="./docs/assets/tf-tg-logo.png" style="height: 250px; width: auto;">
 </div>
 
-<h2 align="center">Supported cloud providers</h2>
+<h2 align="center">SUPPORTED CLOUD PROVIDERS</h2>
 
 <div align="center">
-  <p style="inline-block;">
-    <img src="./docs/assets/alicloud-logo.png" style="height: 90px; width: auto;">
-    <img src="./docs/assets/gcp-logo.png" style="height: 35px; width: auto;">
-  </p>
+    <img src="./docs/assets/alicloud-gcp-logo.png" style="height: 200px; width: auto;">
 </div>
 
 <div align="center">
-  <p>
-    <img src="./docs/assets/aws-logo.png" style="height: 90px; width: auto;">
-    <img src="./docs/assets/azure-logo.png" style="height: 115px; width: auto;">
-    <img src="./docs/assets/tencent-logo.png" style="height: 100px; width: auto;">
-  </p>
+  <img src="./docs/assets/aws-azure-tencent-logo.png" style="height: 160px; width: auto;">
 </div>
 
 ---
 
-<div align="center" style="margin-top: 20px;">
-  <p>
-    <img src="./docs/assets/hetzner-logo.png" style="height: 90px; width: auto;">
-    <img src="./docs/assets/linode-logo.png" style="height: 70px; width: auto; position: relative; left: 25px;">
-  </p>
+<div align="center">
+  <img src="./docs/assets/hetzner-linode-logo.png" style="height: 160px; width: auto;">
 </div>
 
-<div align="center" style="margin-top: 20px;">
-  <p>
-    <img src="./docs/assets/digitalocean-logo.png" style="height: 100px; width: auto;">
-    <img src="./docs/assets/huawei-logo.png" style="height: 80px; width: auto; position: relative; left: 0px;">
-    <img src="./docs/assets/ibm-logo.png" style="height: 80px; width: auto; position: relative; left: 50px;">
-  </p>
+<div align="center">
+    <img src="./docs/assets/do-huawei-ibm-logo.png" style="height: 160px; width: auto;">
 </div>
 
-<div align="center" style="margin-top: 20px; margin-bottom: 30px;">
-  <img src="./docs/assets/oci-logo.png" style="height: 90px; width: auto;">
-  <img src="./docs/assets/ovh-logo.png" style="height: 80px; width: auto; position: relative; left: 25px;">
-  <img src="./docs/assets/vultr-logo.png" style="height: 60px; width: auto; position: relative; left: 50px;">
+<div align="center">
+  <img src="./docs/assets/oci-ovh-vultr-logo.png" style="height: 160px; width: auto;">
 </div>
 
 ---
@@ -75,21 +57,23 @@ Pull requests for features/modifications/suggestions are welcome for a better in
 
 ## Roadmap progress of the project
 
-**Provider setup:**
-- [x] AliCloud
-- [x] AWS
-- [x] Azure
-- [x] Google Cloud
-- [x] Tencent Cloud
-
-- [x] DigitalOcean
-- [x] Hetzner
-- [x] Huawei
-- [] IBM
-- [x] Linode
-- [ ] Oracle
-- [x] OVH
-- [ ] Vultr
+### Provider Setup
+```mermaid
+flowchart TD
+    P1["AliCloud ✅"]
+    P2["AWS ✅"]
+    P3["Azure ✅"]
+    P4["Google Cloud ✅"]
+    P5["Tencent Cloud ✅"]
+    P6["DigitalOcean ✅"]
+    P7["Hetzner ✅"]
+    P8["Huawei ✅"]
+    P9["IBM ⬜"]
+    P10["Linode ✅"]
+    P11["Oracle ⬜"]
+    P12["OVH ✅"]
+    P13["Vultr ⬜"]
+```
 
 **Terraform state backend setup:**
 - [x] AliCloud
