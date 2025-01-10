@@ -57,9 +57,10 @@ Pull requests for features/modifications/suggestions are welcome for a better in
 
 ## Roadmap progress of the project
 
-### Provider Setup
+**Provider setup:**
 ```mermaid
-flowchart TD
+flowchart TB
+    %% Tasks arranged in a 4x4 grid
     P1["AliCloud ✅"]
     P2["AWS ✅"]
     P3["Azure ✅"]
@@ -68,92 +69,139 @@ flowchart TD
     P6["DigitalOcean ✅"]
     P7["Hetzner ✅"]
     P8["Huawei ✅"]
-    P9["IBM ⬜"]
-    P10["Linode ✅"]
-    P11["Oracle ⬜"]
-    P12["OVH ✅"]
+    P9["Linode ✅"]
+    P10["OVH ✅"]
+    P11["IBM ⬜"]
+    P12["Oracle ⬜"]
     P13["Vultr ⬜"]
+
+    %% Grid arrangement
+    P1 --> P2 --> P3 --> P4
+    P5 --> P6 --> P7 --> P8
+    P9 --> P10 
+    P11 --> P12 --> P13
 ```
 
 **Terraform state backend setup:**
-- [x] AliCloud
-- [x] AWS
-- [x] Azure
-- [x] Google Cloud
-- [x] Tencent Cloud
+```mermaid
+flowchart TB
+    %% Tasks arranged in a 4x4 grid
+    P1["AliCloud ✅"]
+    P2["AWS ✅"]
+    P3["Azure ✅"]
+    P4["Google Cloud ✅"]
+    P5["Tencent Cloud ✅"]
+    P6["DigitalOcean ⬜"]
+    P7["Hetzner ⬜"]
+    P8["Huawei ⬜"]
+    P9["IBM ⬜"]
+    P10["Linode ⬜"]
+    P11["Oracle ⬜"]
+    P12["OVH ⬜"]
+    P13["Vultr ⬜"]
 
-- [ ] DigitalOcean
-- [ ] Hetzner
-- [ ] Huawei
-- [ ] IBM
-- [ ] Linode
-- [ ] Oracle
-- [ ] OVH
-- [ ] Vultr
+    %% Grid arrangement
+    P1 --> P2 --> P3 --> P4
+    P5
+    P6 --> P7 --> P8 --> P9
+    P10 -->P11 --> P12 --> P13
+```
 
 **Cloud specific infrastructure setup:**
-- [ ] AliCloud
-- [ ] AWS
-- [ ] Azure
-- [ ] Google Cloud
-- [ ] Tencent Cloud
+```mermaid
+flowchart TB
+    %% Tasks arranged in a 4x4 grid
+    P1["AliCloud ⬜"]
+    P2["AWS ⬜"]
+    P3["Azure ⬜"]
+    P4["Google Cloud ⬜"]
+    P5["Tencent Cloud ⬜"]
+    P6["DigitalOcean ⬜"]
+    P7["Hetzner ⬜"]
+    P8["Huawei ⬜"]
+    P9["IBM ⬜"]
+    P10["Linode ⬜"]
+    P11["Oracle ⬜"]
+    P12["OVH ⬜"]
+    P13["Vultr ⬜"]
 
-- [ ] DigitalOcean
-- [ ] Hetzner
-- [ ] Huawei
-- [ ] IBM
-- [ ] Linode
-- [ ] Oracle
-- [ ] OVH
-- [ ] Vultr
+    %% Grid arrangement
+    P1 --> P2 --> P3 --> P4
+    P5 --> P6 --> P7 --> P8
+    P9 --> P10 --> P11 --> P12 --> P13
+```
 
 **TalosOS Kubernetes cluster setup:**
-- [ ] AliCloud
-- [ ] AWS
-- [ ] Azure
-- [ ] Google Cloud
-- [ ] Tencent Cloud
+```mermaid
+flowchart TB
+    %% Tasks arranged in a 4x4 grid
+    P1["AliCloud ⬜"]
+    P2["AWS ⬜"]
+    P3["Azure ⬜"]
+    P4["Google Cloud ⬜"]
+    P5["Tencent Cloud ⬜"]
+    P6["DigitalOcean ⬜"]
+    P7["Hetzner ⬜"]
+    P8["Huawei ⬜"]
+    P9["IBM ⬜"]
+    P10["Linode ⬜"]
+    P11["Oracle ⬜"]
+    P12["OVH ⬜"]
+    P13["Vultr ⬜"]
 
-- [ ] DigitalOcean
-- [ ] Hetzner
-- [ ] Huawei
-- [ ] IBM
-- [ ] Linode
-- [ ] Oracle
-- [ ] OVH
-- [ ] Vultr
+    %% Grid arrangement
+    P1 --> P2 --> P3 --> P4
+    P5 --> P6 --> P7 --> P8
+    P9 --> P10 --> P11 --> P12 --> P13
+```
 
 **Adapt the development environment to staging environment:**
-- [ ] AliCloud
-- [ ] AWS
-- [ ] Azure
-- [ ] Google Cloud
-- [ ] Tencent Cloud
+```mermaid
+flowchart TB
+    %% Tasks arranged in a 4x4 grid
+    P1["AliCloud ⬜"]
+    P2["AWS ⬜"]
+    P3["Azure ⬜"]
+    P4["Google Cloud ⬜"]
+    P5["Tencent Cloud ⬜"]
+    P6["DigitalOcean ⬜"]
+    P7["Hetzner ⬜"]
+    P8["Huawei ⬜"]
+    P9["IBM ⬜"]
+    P10["Linode ⬜"]
+    P11["Oracle ⬜"]
+    P12["OVH ⬜"]
+    P13["Vultr ⬜"]
 
-- [ ] DigitalOcean
-- [ ] Hetzner
-- [ ] Huawei
-- [ ] IBM
-- [ ] Linode
-- [ ] Oracle
-- [ ] OVH
-- [ ] Vultr
+    %% Grid arrangement
+    P1 --> P2 --> P3 --> P4
+    P5 --> P6 --> P7 --> P8
+    P9 --> P10 --> P11 --> P12 --> P13
+```
 
 **Addapt the staging environment to production environment:**
-- [ ] AliCloud
-- [ ] AWS
-- [ ] Azure
-- [ ] Google Cloud
-- [ ] Tencent Cloud
+```mermaid
+flowchart TB
+    %% Tasks arranged in a 4x4 grid
+    P1["AliCloud ⬜"]
+    P2["AWS ⬜"]
+    P3["Azure ⬜"]
+    P4["Google Cloud ⬜"]
+    P5["Tencent Cloud ⬜"]
+    P6["DigitalOcean ⬜"]
+    P7["Hetzner ⬜"]
+    P8["Huawei ⬜"]
+    P9["IBM ⬜"]
+    P10["Linode ⬜"]
+    P11["Oracle ⬜"]
+    P12["OVH ⬜"]
+    P13["Vultr ⬜"]
 
-- [ ] DigitalOcean
-- [ ] Hetzner
-- [ ] Huawei
-- [ ] IBM
-- [ ] Linode
-- [ ] Oracle
-- [ ] OVH
-- [ ] Vultr
+    %% Grid arrangement
+    P1 --> P2 --> P3 --> P4
+    P5 --> P6 --> P7 --> P8
+    P9 --> P10 --> P11 --> P12 --> P13
+```
 
 
 ## Requirements
