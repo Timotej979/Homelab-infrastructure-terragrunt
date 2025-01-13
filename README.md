@@ -52,7 +52,7 @@ Cloud providers not supporting a custom terraform state backend (Must be used wi
 
 Finally there is support for the bare-metal setup, however this requires a correct server setup and configuration.
 
-Pull requests for features/modifications/suggestions are welcome for a better integration/abstraction mechanisms of IaC, since this repository is still in development and managed in my free time as a Bachelor's thesis project.
+Pull requests for features/modifications/suggestions are welcome for a better integration/abstraction mechanisms of IaC, since this repository is still in development and managed in my free time as a Master's thesis project.
 
 
 ## Roadmap progress of the project

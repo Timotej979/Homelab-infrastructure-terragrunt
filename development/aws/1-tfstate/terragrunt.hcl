@@ -19,9 +19,35 @@ generate "remote_state" {
     if_exists = "overwrite"
     contents  = <<EOF
         %{ if local.environment_vars.locals.aws_provider_config.enabled }
-        resource "aws_s3_bucket" "tfstate_bucket" {
+        # Create the KMS key
+        resource "aws_kms_key" "${local.environment}_tfstate_kms_key" {
+            description             = "This key is used to encrypt the Terraform state bucket"
+            deletion_window_in_days = 10
+            enable_key_rotation     = true
+            }
+
+            resource "aws_kms_alias" "${local.environment}_tfstate_kms_alias" {
+            name          = "tfstate/${local.environment}"
+            target_key_id = aws_kms_key.${local.environment}_tfstate_kms_key.key_id
+            }
+
+        # Create the S3 bucket with versioning and encryption
+        resource "aws_s3_bucket" "${local.environment}_tfstate_bucket" {
             bucket = "${local.environment}-tfstate"
             acl    = "private"
+
+            versioning {
+                enabled = true
+            }
+
+            server_side_encryption_configuration {
+                rule {
+                    apply_server_side_encryption_by_default {
+                        sse_algorithm = "aws:kms"
+                        kms_master_key_id = aws_kms_key.${local.environment}_tfstate_kms_key.key_id
+                    }
+                }
+            }
 
             lifecycle {
                 prevent_destroy = false
@@ -33,14 +59,29 @@ generate "remote_state" {
             }
         }
 
+        # Set the ACL on the bucket to private
+        resource "aws_s3_bucket_public_access_block" "${local.environment}_tfstate_bucket_acl" {
+            bucket = aws_s3_bucket.${local.environment}_tfstate_bucket.bucket
+            block_public_acls       = true
+            block_public_policy     = true
+            ignore_public_acls      = true
+            restrict_public_buckets = true
+        }
+
+        # Create the DynamoDB table for state locking
         resource "aws_dynamodb_table" "tfstate_lock"
             name           = "${local.environment}-tfstate-lock"
             read_capacity  = 20
             write_capacity = 20
             hash_key       = "LockID"
+
             attribute {
                 name = "LockID"
                 type = "S"
+            }
+
+            lifecycle {
+                prevent_destroy = false
             }
 
             tags = {
